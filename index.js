@@ -34,7 +34,7 @@ module.exports = {
     }
 
 
-    let result = path.dirname(resolve.sync(`${pkg}/package.json`, { basedir: root }));
+    let result = path.dirname(resolve.sync(`${pkg}/package.json`, {basedir: root}));
 
     // add sub folders to path
     if (parts.length > 1) {
@@ -52,7 +52,7 @@ module.exports = {
     trees.push(new Funnel(this.resolvePackagePath('bootstrap-colorpicker/dist/js'), {
       destDir: 'bootstrap-colorpicker'
     }));
-    return mergeTrees(trees, { overwrite: true });
+    return mergeTrees(trees, {overwrite: true});
   },
 
   treeForPublic() {
